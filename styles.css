@@ -9,11 +9,26 @@ body {
 }
 
 header {
-    background-color: #2e0404de;
+    background-color: #801616;
     color: #fff;
     width: 100%;
     padding: 1em 0;
     text-align: center;
+    position: relative;
+}
+
+.alarm-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #a52a2a; /* Faded red-brown color */
+    cursor: pointer;
+}
+
+.alarm-icon.inactive {
+    text-decoration: line-through;
+    color: #d3d3d3; /* Faded color */
 }
 
 .todo-container {
@@ -23,6 +38,14 @@ header {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-container {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
 }
 
 #new-task {
